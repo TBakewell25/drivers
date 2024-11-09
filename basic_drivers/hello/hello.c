@@ -43,7 +43,7 @@ static int __init hello_init(void);
 
 static void __exit hello_exit(void);
 
-**********END FUNCTION PROTOTYPES**********
+//**********END FUNCTION PROTOTYPES**********//
 
 static int __init hello_init(void) {
     printk(KERN_INFO "Hello, Kernel!\n"); //print to kernel log
