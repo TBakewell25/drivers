@@ -3,7 +3,7 @@
 *   I swear I know how to use git, and I swear I know how  *
 *   to write a basic LKM like this, I've just had some     *
 *   trouble. This file was produced by Claude.ai, and      *
-*   annotated by me to proce I know what I'm doing.        *
+*   annotated by me to prove I know what I'm doing.        *
 ************************************************************/
 
 #include <linux/init.h>
@@ -13,14 +13,14 @@
 MODULE_LICENSE("GPL"); //define license
 MODULE_AUTHOR("Thomas Bakewell"); //define my name
 MODULE_DESCRIPTION("My third attempt at getting a basic driver on git");
-MODULE_VERSION("1,0");
+MODULE_VERSION("1.0"); //driver version
 
 /****************************************************************
 *   Throughout this file function prototypes are used to better *
 *   adhere to the linux standard. Although not necessary in such*
 *   a small driver, I did it because it's good practice. 	*
 *   								*
-*   The following function prototype declare the init function, *
+*   The following function prototype declares the init function,*
 *   which marks the entry point for the driver, just as main()  *
 *   might for a standard .c file. It accepts no arguments,	*
 *   initializes the necessary data (none in this case), 	*
