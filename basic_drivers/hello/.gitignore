@@ -1,27 +1,75 @@
-#courtesy of our friends at OpenAI
-# Compiled kernel module files
+# Linux Kernel Module specific
 *.ko
 *.mod
 *.mod.c
 *.o
 *.order
 Module.symvers
-
-# Compiler generated files
-*.cmd
-.tmp_versions/
-
-# Build artifacts and cache
 modules.order
+.tmp_versions/
 .cache.mk
 
-# Editor temporary files
-*~
-.*.swp
-.*.swo
-
-# Build logs and debug info
+# Build artifacts and generated files
+*.cmd
 *.dwo
 *.ko.cmd
 .Module.symvers.cmd
+*.mod.o.cmd
+.*.o.cmd
+*.o.d
 
+# Debug info
+*.dwo
+*.symtypes
+*.markers
+
+# DKMS
+dkms.conf
+dkms.log
+make.log
+
+# Development environments
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Backup files
+*~
+*.bak
+*.backup
+.*.swp
+.*.swo
+*.tmp
+
+# System files
+.DS_Store
+.directory
+.Trash-*
+
+# Tags and indexing
+tags
+TAGS
+cscope.*
+ncscope.*
+GTAGS
+GRTAGS
+GPATH
+GSYMS
+
+# Patch files
+*.patch
+*.diff
+*.orig
+*.rej
+
+# Local development files
+todo.txt
+notes.txt
+*.local
+.env*
+
+# Build directories
+build/
+dist/
+out/
