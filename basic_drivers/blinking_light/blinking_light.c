@@ -10,9 +10,10 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/init.h>
+#include <linux/pinctrl/pinctrl.h>
 #include <linux/device.h> //find gpio info
 #include <linux/fs.h> //handle major number
-#include <linux/usb.h> //duh
+#include <linux/gpio.h>
 
 MODULE_LICENSE("GPL"); //define license
 MODULE_AUTHOR("Thomas Bakewell"); //define my name
