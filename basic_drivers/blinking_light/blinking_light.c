@@ -22,22 +22,22 @@ MODULE_VERSION("0.1"); //driver version
 /*
 *  Defining a struct that allows us to pass data
 *  to the USB subsystem in order to register the device
+*  .name defines the driver name
+*  .probe defines the probe function
+*  .disconnect defines the disconnect function
+*  .fops is a list of file ops
+*  .minor points to the minor number
+*  .id_table: if the device matches the data
+*  in this table register it with the USB subsysten
 */
 
 static struct usb_driver blink_driver = {
-        //device name
-	.name        = "blinky", 
-	//probe function
-        .probe       = blink_probe, 
-	//disconnect function
-        .disconnect  = blink_disconnect,
-	//list of file ops
+	.name = "blinky", 
+        .probe = blink_probe, 
+        .disconnect = blink_disconnect,
 	.fops = &blink_ops,
-	//minor num
-        .minor       = USB_BLINK_MINOR_BASE, 
-	//if the device matches the data in
-	//this table, register it
-        .id_table    = BLINK_table, 
+        .minor = USB_BLINK_MINOR_BASE, 
+        .id_table = BLINK_table, 
 				   
 };
 
@@ -74,6 +74,7 @@ static int __init init_led_blink(void){
 static void __exit exit_led_blink(void){
 	//deregister from the USB subsystem
 	usb_deregister(&blink_driver);
+}
 	
 module_init(init_led_blink); //init driver
 module_exit(exit_led_blink); //clean driver
